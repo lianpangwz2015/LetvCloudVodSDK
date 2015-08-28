@@ -2,7 +2,7 @@
 /**
  * 乐视视频云 点播API
  *
- * @package Medz\SDK\LetvCloudSDK
+ * @package Medz\SDK\LetvCloud\Vod
  * @author Medz Seven <lovevipdsw@vip.qq.com>
  * @link http://medz.cn
  * @copyright © 2015, Medz Seven Developer. All rights reserved.
