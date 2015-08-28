@@ -9,7 +9,7 @@
  * @document http://static.letvcloud.com/wiki/doc/LetvCloudOpenApi_v1.0.pdf
  * @discription 该SDK是根据乐视云视频API接口v2.3文档编写，
  **/
-class LetvCloudSDK
+class LetvCloudVodSDK
 {
 	/**
 	 * 储存当前实例化类
