@@ -1,15 +1,18 @@
 <?php
+
+namespace Medz\Component\SDK\LetvCloud\Vod;
+
 /**
  * 乐视视频云 点播API
  *
- * @package Medz\SDK\LetvCloud\Vod
- * @author Medz Seven <lovevipdsw@vip.qq.com>
+ * @package Medz\Component\SDK\LetvCloud\Vod\SDK
+ * @author Seven Du <lovevipdsw@outlook.com>
  * @link http://medz.cn
- * @copyright © 2015, Medz Seven Developer. All rights reserved.
+ * @copyright © 2016, Seven Du Developer. All rights reserved.
  * @document http://static.letvcloud.com/wiki/doc/LetvCloudOpenApi_v1.0.pdf
  * @discription 该SDK是根据乐视云视频API接口v2.3文档编写，
  **/
-class LetvCloudVodSDK
+class SDK
 {
 	/**
 	 * 储存当前实例化类
@@ -225,7 +228,7 @@ class LetvCloudVodSDK
 	 * 单例获取当前SDK
 	 *
 	 * @return object 当前类
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	final public static function getInstance()
 	{
@@ -241,7 +244,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param string $userUnique 用户唯一ID
 	 * @return object self
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function setUserUnique($userUnique)
 	{
@@ -253,7 +256,7 @@ class LetvCloudVodSDK
 	 * 获取用户唯一ID
 	 *
 	 * @return string 用户唯一ID
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getUserUnique()
 	{
@@ -265,7 +268,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param string $secretKey 用户唯一密钥
 	 * @return object self
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function setSecretKey($secretKey)
 	{
@@ -277,7 +280,7 @@ class LetvCloudVodSDK
 	 * 获取用户密钥
 	 *
 	 * @return string 用户密钥
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getSecreKey()
 	{
@@ -288,7 +291,7 @@ class LetvCloudVodSDK
 	 * 构造方法，用于初始化信息
 	 *
 	 * @return void
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	final private function __construct()
 	{
@@ -303,7 +306,7 @@ class LetvCloudVodSDK
 	 * 克隆触发事件 用于禁止克隆
 	 *
 	 * @return void
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	final public function __clone()
 	{
@@ -316,7 +319,7 @@ class LetvCloudVodSDK
 	 * 析构方法，主要用于销毁单例对象
 	 *
 	 * @return void
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	final public function __destruct()
 	{
@@ -329,7 +332,7 @@ class LetvCloudVodSDK
 	 * 销毁单例数据
 	 *
 	 * @return void
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	final private static function unInstance()
 	{
@@ -340,7 +343,7 @@ class LetvCloudVodSDK
 	 * 设置消息
 	 *
 	 * @return void
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	protected function setMessage($message)
 	{
@@ -351,7 +354,7 @@ class LetvCloudVodSDK
 	 * 获取消息
 	 *
 	 * @return string
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getMessage()
 	{
@@ -364,7 +367,7 @@ class LetvCloudVodSDK
 	 * @param string $url 请求的地址
 	 * @param array $postParam POST请求的数据
 	 * @return boolean 是否请求成功
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	protected function request($url, array $postParam = array())
 	{
@@ -420,7 +423,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param string $data 原始数据
 	 * @return void
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	protected function setData($data)
 	{
@@ -431,7 +434,7 @@ class LetvCloudVodSDK
 	 * 获取原始数据
 	 *
 	 * @return string
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getData()
 	{
@@ -443,7 +446,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param boolean $returnArray 是否返回数组 如果是true，返回数组，否则返回对象
 	 * @return array|object 格式化后的数据
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getFormatData($returnArray = true)
 	{
@@ -455,7 +458,7 @@ class LetvCloudVodSDK
 	 * 获取API版本
 	 *
 	 * @return string
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getVersion()
 	{
@@ -466,7 +469,7 @@ class LetvCloudVodSDK
 	 * 获取数据格式
 	 *
 	 * @return string
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getFormat()
 	{
@@ -478,7 +481,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param string $url API请求地址
 	 * @return object self
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function setApiRequestAddress($url)
 	{
@@ -490,7 +493,7 @@ class LetvCloudVodSDK
 	 * 获取API请求地址
 	 *
 	 * @return string
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getApiRequestAddress()
 	{
@@ -502,7 +505,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param array $params 签字参数
 	 * @return string
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function generateSign(array $params)
 	{
@@ -522,7 +525,7 @@ class LetvCloudVodSDK
 	 * @param $apiName API名称
 	 * @param $apiParam API请求参数
 	 * @return boolean 成功或者失败
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function api($apiName, array $apiParam = array())
 	{
@@ -558,7 +561,7 @@ class LetvCloudVodSDK
 	 * @param int $videoSize 视频尺寸 单位字节
 	 * @param string 用户客户端IP地址
 	 * @return array 上传信息
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function uploadInit($videoName, $uploadType = self::UPLOAD_TYPE_0, $videoSize = 0, $clientIP = '')
 	{
@@ -586,7 +589,7 @@ class LetvCloudVodSDK
 	 * @param string $uploadURL 视频的上传地址（通过上传初始化获得）
 	 * @param string $videoFileAddress 视频文件绝对地址
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function upload2Web($uploadURL, $videoFileAddress)
 	{
@@ -601,7 +604,7 @@ class LetvCloudVodSDK
 	 * @param string $token 视频上传标识
 	 * @param int $uploadType self::UPLOAD_TYPE_0|self::UPLOAD_TYPE_1 上传方式UPLOAD_TYPE_0为完整上传，UPLOAD_TYPE_1为分片上传
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function uploadResume($token, $uploadType = self::UPLOAD_TYPE_0)
 	{
@@ -622,7 +625,7 @@ class LetvCloudVodSDK
 	 * @param int $width 上传控件宽度
 	 * @param int $height 上传控件高度
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function upload2Flash($videoName, $jsCallback = '', $width = 600, $height = 450, $clientIP = '')
 	{
@@ -647,7 +650,7 @@ class LetvCloudVodSDK
 	 * @param string $progressUrl 视频上传的回调地址
 	 * @param string $token 初始化视频时候的视频token
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getUploadProgress($progressUrl, $token)
 	{
@@ -662,7 +665,7 @@ class LetvCloudVodSDK
 	 * @param int $videoID 视频ID
 	 * @param string 视频新名称 最多60字
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function update2Rename($videoID, $newName)
 	{
@@ -678,7 +681,7 @@ class LetvCloudVodSDK
 	 * @param int $videoID 视频ID
 	 * @param string $discription 视频描述 最多600字
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function update2Desc($videoID, $discription)
 	{
@@ -695,7 +698,7 @@ class LetvCloudVodSDK
 	 * @param int $videoID 视频ID
 	 * @param boolean $isPay 是否收费， 默认不收费
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function update2IsPay($videoID, $isPay = false)
 	{
@@ -712,7 +715,7 @@ class LetvCloudVodSDK
 	 * @param int $videoID 视频ID
 	 * @param array $tags 设置视频标签，多个参数传入，每个传输必须是标签名称
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 * @descript 标签只允许有五个，每个标签不要超过10个字
 	 **/
 	public function update2Tag($videoID, array $tag)
@@ -748,7 +751,7 @@ class LetvCloudVodSDK
 	 * 设置视频播放时候默认的首帧视频图片
 	 *
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function update2Pic($videoID, $picUrl)
 	{
@@ -765,7 +768,7 @@ class LetvCloudVodSDK
 	 * @param int $size 页数量，默认为10条，做多每页100
 	 * @param int $status 状态，默认 STATUS_ALL，STATUS_ALL全部状态的视频， STATUS_PLAY_OK播放完成的视频， STATUS_FAILED树立失败的视频，STATUS_WAIT正在处理的
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getList($index = 1, $size = 10, $status = self::STATUS_ALL)
 	{
@@ -781,7 +784,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param int $videoID 视频ID
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getInfo($videoID)
 	{
@@ -795,7 +798,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param int $videoID 视频ID
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function delete2One($videoID)
 	{
@@ -809,7 +812,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param array $ids 视频列表 批量删除每次最多50条
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function delete2Batch(array $ids)
 	{
@@ -833,7 +836,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param int $videoID 需要暂停的视频ID
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function videoPause($videoID)
 	{
@@ -847,7 +850,7 @@ class LetvCloudVodSDK
 	 *
 	 * @param int $videoID
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function videoRestore($videoID)
 	{
@@ -862,7 +865,7 @@ class LetvCloudVodSDK
 	 * @param int $videoID 视频ID
 	 * @param string $size 截图尺寸，只有一下尺寸供选择，不可自定义尺寸获取，尺寸如下：100_100、200_200、300_300、120_90、128_96、132_99、160_120、200_150、400_300、160_90、320_180、640_360、90_120、120_160、150_200、300_400
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getVideoImage($videoID, $size = '640_360')
 	{
@@ -881,7 +884,7 @@ class LetvCloudVodSDK
 	 * @param int $size 每页显示的数量 默认10条，最多每页100条
 	 * @param int $videoID 视频ID 默认null，传入则只获取这个视频的数据
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getData2Hour($date, $hour = null, $index = 1, $size = 10, $videoID = null)
 	{
@@ -908,7 +911,7 @@ class LetvCloudVodSDK
 	 * @param int $index 起始页数 默认是1
 	 * @param int $size 每页显示的条数 默认是10，，最多每页显示100
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getData2Date($startDate, $endDate, $index = 1, $size = 10, $videoID = null)
 	{
@@ -933,7 +936,7 @@ class LetvCloudVodSDK
 	 * @param  int $index 开始页索引，默认值为1
 	 * @param  int $size 分页大小，默认值为10，最大值为100
 	 * @return boolean
-	 * @author Medz Seven <lovevipdsw@vip.qq.com>
+	 * @author Seven Du <lovevipdsw@outlook.com>
 	 **/
 	public function getData2All($startDate, $endDate, $index = 1, $size = 10)
 	{
@@ -945,9 +948,9 @@ class LetvCloudVodSDK
 		));
 	}
 
-} // END public class LetvCloudSDK
+} // END public class SDK
 
-// $sdk = LetvCloudSDK::getInstance();
+// $sdk = SDK::getInstance();
 // $sdk->setUserUnique('39c10s3ekd')->setSecretKey('9f4d54d62590c27a5564821b88429e2e');
 // $sdk->getList(); /* # 列表 */
 // var_dump($sdk, $sdk->getFormatData());

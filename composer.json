@@ -1,0 +1,29 @@
+{
+    "name": "medz/sdk-letvcloud-vod",
+    "type": "library",
+    "keywords": ["medz", "php", "sdk", "letv", "letvsdk", "vod"],
+    "description": "The Component is LetvCloud Video vod SDK.",
+    "homepage": "http://medz.cn",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seven Du",
+            "email": "lovevipdsw@outlook.com",
+            "homepage": "http://medz.cn"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.9",
+    },
+    "autoload": {
+        "classmap": [
+            "src/LetvCloudVodSDK.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
